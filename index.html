@@ -9,30 +9,50 @@
   </head>
   <body>
     <div class="container">
-      <div id="display" class="display" onclick="output(event)">Kemal</div>
+      <div id="display" class="display" onclick="output(event)">
+        <div class="dis-item" id="lastOperation">asda</div>
+        <div class="dis-item" id="currentOperation">asdas</div>
+      </div>
       <div class="operators">
         <div id="addition" onclick="output(event)" class="operator plus btn">
-          ekle
+          +
         </div>
-        <div id="subtraction" class="operator minus btn">-</div>
-        <div id="multiplication" class="operator multp btn">*</div>
-        <div id="dividing" class="operator divide btn">/</div>
+        <div
+          id="subtraction"
+          onclick="output(event)"
+          class="operator minus btn"
+        >
+          -
+        </div>
+        <div
+          id="multiplication"
+          onclick="output(event)"
+          class="operator multp btn"
+        >
+          *
+        </div>
+        <div id="dividing" onclick="output(event)" class="operator divide btn">
+          /
+        </div>
       </div>
       <div class="numbers">
-        <div id="1" class="number btn" onclick="inputVal(event)">1</div>
-        <div id="2" class="number btn" onclick="inputVal(event)">2</div>
-        <div id="3" class="number btn" onclick="inputVal(event)">3</div>
-        <div id="4" class="number btn" onclick="inputVal(event)">4</div>
-        <div id="5" class="number btn" onclick="inputVal(event)">5</div>
-        <div id="6" class="number btn" onclick="inputVal(event)">6</div>
-        <div id="7" class="number btn" onclick="inputVal(event)">7</div>
-        <div id="8" class="number btn" onclick="inputVal(event)">8</div>
-        <div id="9" class="number btn" onclick="inputVal(event)">9</div>
-        <div id="0" class="number btn" onclick="inputVal(event)">0</div>
-        <div id="." class="number btn" onclick="inputVal(event)">.</div>
-        <div id="AC" class="number btn" onclick="inputVal(event)">AC</div>
+        <div id="1" class="number btn">1</div>
+        <div id="2" class="number btn">2</div>
+        <div id="3" class="number btn">3</div>
+        <div id="4" class="number btn">4</div>
+        <div id="5" class="number btn">5</div>
+        <div id="6" class="number btn">6</div>
+        <div id="7" class="number btn">7</div>
+        <div id="8" class="number btn">8</div>
+        <div id="9" class="number btn">9</div>
+        <div id="0" class="number btn">0</div>
+        <div id="." class="btn">.</div>
+        <div id="AC" class="btn">AC</div>
       </div>
-      <div class="equal"></div>
+      <div class="last">
+        <div id="delete" class="btn-2">Delete</div>
+        <div id="equal" class="btn-2">=</div>
+      </div>
       <script src="main.js"></script>
     </div>
   </body>

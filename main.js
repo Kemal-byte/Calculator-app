@@ -1,24 +1,31 @@
-const display = document.getElementsByClassName("display")[0];
-const addition = document.getElementsByClassName("operators")[0];
-const subtraction = document.getElementsByClassName("operators")[1];
-const multiplication = document.getElementsByClassName("operators")[2];
-const dividing = document.getElementsByClassName("operators")[3];
+let lastNumber = "";
+let currentNumber = "";
 
-let operation;
-let sum = 0;
-let input = 0;
+const addition = document.getElementById("addition");
+const substraction = document.getElementById("subtraction");
+const multiplication = document.getElementById("multiplication");
+const dividing = document.getElementById("dividing");
+const clearBtn = document.getElementById("AC");
+const pointBtn = document.getElementById(".");
+const equal = document.getElementById("equal");
+const numbers = document.querySelectorAll(".number");
+const deleteBtn = document.getElementById("delete");
 
-const output = (event) => {
-  operation = event.target.id;
-  console.log(operation);
-};
+const lastOperation = document.getElementById("lastOperation");
+const currentOperation = document.getElementById("currentOperation");
 
-const inputVal = (event) => {
-  input = event.target.id;
-  let inputValue = document.getElementById(`${input}`);
-  console.log(inputValue.innerHTML);
-  // For some reason .value returns undefined.
-};
+console.log(
+  addition.innerHTML.trim() +
+    " " +
+    substraction.innerHTML.trim() +
+    " " +
+    multiplication.innerHTML.trim() +
+    " " +
+    dividing.innerHTML.trim() +
+    numbers[1].innerHTML
+);
 
-if (operation === "addition") {
-}
+deleteBtn.addEventListener("click", deleteNumber);
+clearBtn.addEventListener("click", clearDisplay);
+pointBtn.addEventListener("click", addPoint);
+equal.addEventListener("click", evaluate);
