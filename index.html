@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="display" class="display" onclick="output(event)">Kemal</div>
+      <div class="operators">
+        <div id="addition" onclick="output(event)" class="operator plus btn">
+          ekle
+        </div>
+        <div id="subtraction" class="operator minus btn">-</div>
+        <div id="multiplication" class="operator multp btn">*</div>
+        <div id="dividing" class="operator divide btn">/</div>
+      </div>
+      <div class="numbers">
+        <div id="1" class="number btn" onclick="inputVal(event)">1</div>
+        <div id="2" class="number btn" onclick="inputVal(event)">2</div>
+        <div id="3" class="number btn" onclick="inputVal(event)">3</div>
+        <div id="4" class="number btn" onclick="inputVal(event)">4</div>
+        <div id="5" class="number btn" onclick="inputVal(event)">5</div>
+        <div id="6" class="number btn" onclick="inputVal(event)">6</div>
+        <div id="7" class="number btn" onclick="inputVal(event)">7</div>
+        <div id="8" class="number btn" onclick="inputVal(event)">8</div>
+        <div id="9" class="number btn" onclick="inputVal(event)">9</div>
+        <div id="0" class="number btn" onclick="inputVal(event)">0</div>
+        <div id="." class="number btn" onclick="inputVal(event)">.</div>
+        <div id="AC" class="number btn" onclick="inputVal(event)">AC</div>
+      </div>
+      <div class="equal"></div>
+      <script src="main.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(174, 164, 164);
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  /* align-items: center; */
+}
+.container {
+  margin: auto auto;
+  width: 40%;
+  background-color: #fff;
+  width: 300px;
+}
+.display {
+  margin: 3px;
+  background-color: black !important;
+  color: #fff;
+  font-size: 2rem !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.operators {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn {
+  height: 60px;
+  width: 60px;
+  font-weight: 600;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  background-color: grey;
+}
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* gap: 10px; */
+  justify-content: space-evenly;
+}
+.number {
+  flex-shrink: 0;
+}
