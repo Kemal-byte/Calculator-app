@@ -26,6 +26,8 @@ substraction.addEventListener("click", substract);
 dividing.addEventListener("click", divide);
 multiplication.addEventListener("click", multiply);
 
+console.log(operators);
+
 const getNum = function (e) {
   console.log(`${e.target.id}`);
   currentOperation.innerHTML += e.target.id;
@@ -56,13 +58,60 @@ function addPoint() {
   console.log("cliked on point button");
 }
 function evaluate() {
-  console.log("cliked on equal button");
+  // console.log("cliked on equal button");
+  if (getOperator === "addition") {
+    add();
+  } else if (getOperator === "subtraction") {
+    substract();
+  } else if (getOperator === "dividing") {
+    divide();
+  } else if (getOperator === "multiplication") {
+    multiply();
+  }
 }
 
 function add() {
-  // console.log("add btn cliked");
-  currentNumber += currentOperation;
+  if (lastOperation.innerHTML === "") {
+    lastOperation.innerHTML = currentOperation.innerHTML;
+    currentOperation.innerHTML = "";
+  } else {
+    total =
+      Number(lastOperation.innerHTML) + Number(currentOperation.innerHTML);
+    lastOperation.innerHTML = total;
+    currentOperation.innerHTML = "";
+  }
+  // }
 }
-function divide() {}
-function substract() {}
-function multiply() {}
+function substract() {
+  if (lastOperation.innerHTML === "") {
+    lastOperation.innerHTML = currentOperation.innerHTML;
+    currentOperation.innerHTML = "";
+  } else {
+    total =
+      Number(lastOperation.innerHTML) - Number(currentOperation.innerHTML);
+    lastOperation.innerHTML = total;
+    currentOperation.innerHTML = "";
+  }
+}
+function divide() {
+  if (lastOperation.innerHTML === "") {
+    lastOperation.innerHTML = currentOperation.innerHTML;
+    currentOperation.innerHTML = "";
+  } else {
+    total =
+      Number(lastOperation.innerHTML) / Number(currentOperation.innerHTML);
+    lastOperation.innerHTML = total;
+    currentOperation.innerHTML = "";
+  }
+}
+function multiply() {
+  if (lastOperation.innerHTML === "") {
+    lastOperation.innerHTML = currentOperation.innerHTML;
+    currentOperation.innerHTML = "";
+  } else {
+    total =
+      Number(lastOperation.innerHTML) * Number(currentOperation.innerHTML);
+    lastOperation.innerHTML = total;
+    currentOperation.innerHTML = "";
+  }
+}
